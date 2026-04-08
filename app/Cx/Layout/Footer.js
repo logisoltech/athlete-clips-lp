@@ -1,9 +1,9 @@
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: FaFacebookF, href: "/", label: "Facebook" },
-  { icon: FaInstagram, href: "/", label: "Instagram" },
-  { icon: FaYoutube, href: "/", label: "YouTube" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/share/1b11TKxbKm/", label: "Facebook" },
+  { icon: FaInstagram, href: "https://www.instagram.com/proathleteclips?igsh=MWZ3aHEweWNqZHE3OA==", label: "Instagram" },
+  { icon: FaYoutube, href: "https://youtube.com/@athlete-clips?si=rtF67LyR3zkj02uF", label: "YouTube" },
 ];
 
 const Footer = () => {

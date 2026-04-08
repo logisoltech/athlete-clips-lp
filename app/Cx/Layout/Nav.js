@@ -27,18 +27,11 @@ const Nav = () => {
 
         <div className="flex items-center gap-3 sm:gap-4">
           <a
-            href="mailto:hello@athleteclips.com"
+            href="mailto:info@athleteclips.com"
             aria-label="Email Athlete Clips"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-[#6f6f79] transition hover:bg-white hover:text-[#2d204e]"
           >
             <HiOutlineMail size={18} />
-          </a>
-          <a
-            href="tel:+10000000000"
-            aria-label="Call Athlete Clips"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-[#6f6f79] transition hover:bg-white hover:text-[#2d204e]"
-          >
-            <HiOutlinePhone size={17} />
           </a>
         </div>
       </div>

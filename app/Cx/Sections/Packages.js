@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { anton } from "../Font/Font";
 import { FaCheckCircle } from "react-icons/fa";
@@ -68,7 +71,36 @@ const videos = [
   },
 ];
 
+const staticCards = [
+  {
+    src: "/static-1.webp",
+    alt: "Static intro card sample 1",
+  },
+  {
+    src: "/static-2.webp",
+    alt: "Static intro card sample 2",
+  },
+  {
+    src: "/static-3.webp",
+    alt: "Static intro card sample 3",
+  },
+  {
+    src: "/static-4.webp",
+    alt: "Static intro card sample 4",
+  },
+  {
+    src: "/static-5.webp",
+    alt: "Static intro card sample 5",
+  },
+  {
+    src: "/static-6.webp",
+    alt: "Static intro card sample 6",
+  },
+];
+
 const Packages = () => {
+  const [activeTab, setActiveTab] = useState("animated");
+
   return (
     <section
       className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-16 lg:px-10"
@@ -94,7 +126,9 @@ const Packages = () => {
             <div
               key={plan.name}
               className={`relative ${
-                plan.featured ? "pt-[20px]" : ""
+                plan.featured
+                  ? "rounded-[22px] bg-[#ff9a33] p-[3px] pt-[20px] shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+                  : ""
               }`}
             >
               {plan.badge ? (
@@ -108,7 +142,7 @@ const Packages = () => {
               <div
                 className={`flex min-h-[410px] flex-col rounded-[18px] bg-white px-5 pb-5 pt-4 text-[#232323] shadow-[0_12px_30px_rgba(0,0,0,0.18)] ${
                   plan.featured
-                    ? "border-x-[3px] border-b-[3px] border-[#ff9a33] rounded-t-none"
+                    ? "rounded-[15px] shadow-none"
                     : ""
                 }`}
               >
@@ -177,28 +211,72 @@ const Packages = () => {
           <h2
             className={`${anton.className} text-center text-[2.6rem] leading-none text-white uppercase sm:text-[3.6rem]`}
           >
-            Our Work
+            Intro Cards
           </h2>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {videos.map((video) => (
-              <div
-                key={video.id}
-                className="overflow-hidden rounded-2xl bg-black/20 shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+          <div className="mt-6 flex justify-center">
+            <div className="inline-flex rounded-full border border-white/20 bg-white/10 p-1.5 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
+              <button
+                type="button"
+                onClick={() => setActiveTab("animated")}
+                className={`rounded-full px-6 py-2.5 text-sm font-semibold transition ${
+                  activeTab === "animated"
+                    ? "bg-white/20 text-white shadow-[0_8px_20px_rgba(0,0,0,0.18)]"
+                    : "text-white/75 hover:text-white"
+                }`}
               >
-                <div className="aspect-video">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0`}
-                    title={video.title}
-                    className="h-full w-full border-0"
-                    loading="lazy"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            ))}
+                Animated
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveTab("static")}
+                className={`rounded-full px-6 py-2.5 text-sm font-semibold transition ${
+                  activeTab === "static"
+                    ? "bg-white/20 text-white shadow-[0_8px_20px_rgba(0,0,0,0.18)]"
+                    : "text-white/75 hover:text-white"
+                }`}
+              >
+                Static
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {activeTab === "animated"
+              ? videos.map((video) => (
+                  <div
+                    key={video.id}
+                    className="overflow-hidden rounded-2xl bg-black/20 shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+                  >
+                    <div className="aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                        title={video.title}
+                        className="h-full w-full border-0"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                ))
+              : staticCards.map((card) => (
+                  <div
+                    key={card.src}
+                    className="overflow-hidden rounded-2xl bg-black/20 shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+                  >
+                    <div className="relative aspect-video">
+                      <Image
+                        src={card.src}
+                        alt={card.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                ))}
           </div>
         </div>
       </div>

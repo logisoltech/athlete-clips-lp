@@ -7,7 +7,7 @@ const Images = () => {
       className="relative z-10 overflow-visible pb-10 sm:pb-14"
       style={{ backgroundColor: "#2d204e" }}
     >
-      <div className="absolute right-4 top-[75%] hidden h-28 w-1 -translate-y-1/2 bg-cyan-400 lg:block" />
+      <div className="absolute right-4 top-[81%] hidden h-48 w-1 -translate-y-1/2 bg-cyan-400 lg:block" />
 
       <div className="mx-auto max-w-7xl px-0 lg:px-10">
         <div className="relative z-0 mx-auto w-[108%] max-w-none -translate-x-[4%] lg:w-[116%] lg:-translate-x-[6%]">
