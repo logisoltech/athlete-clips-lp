@@ -36,7 +36,7 @@ const Images = () => {
 
             <a
               href="https://athleteclips.com/package-pricing-2/"
-              className="mt-5 inline-flex rounded-full bg-[#ff9b3f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
+              className="mt-5 inline-flex rounded-xl bg-[#ff9b3f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
             >
               Get Your Video Now
             </a>

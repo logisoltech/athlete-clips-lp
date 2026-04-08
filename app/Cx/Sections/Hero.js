@@ -34,7 +34,7 @@ const Hero = () => {
             </span>
             <a
               href="https://athleteclips.com/package-pricing-2/"
-              className="rounded-full bg-[#ff9b3f] px-5 py-2 text-base font-bold text-white transition hover:bg-[#ffa654] sm:text-lg"
+              className="rounded-xl bg-[#ff9b3f] px-5 py-2 text-base font-bold text-white transition hover:bg-[#ffa654] sm:text-lg"
             >
               Highlight Reel
             </a>
@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="relative mt-8 h-[400px] w-full overflow-visible sm:h-[500px] lg:absolute lg:inset-y-0 lg:right-[-40%] lg:mt-6 lg:h-full lg:w-[64%]">
+        <div className="relative mt-8 h-[400px] w-full overflow-visible sm:h-[500px] lg:absolute lg:inset-y-0 lg:right-[-40%] lg:mt-10 lg:h-full lg:w-[64%]">
           <Image
             src="/hero-image.png"
             alt="Soccer player kicking a ball"

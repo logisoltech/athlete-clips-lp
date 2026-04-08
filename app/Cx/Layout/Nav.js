@@ -4,16 +4,16 @@ import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 const Nav = () => {
   return (
     <nav
-      className="relative overflow-hidden px-4 py-4 sm:px-6 lg:px-10"
+      className="relative z-30 overflow-hidden px-4 py-4 sm:px-6 lg:px-10"
       style={{ backgroundColor: "#2d204e" }}
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[32%] top-0 h-full w-28 -skew-x-[28deg] bg-[#4d377f]/35" />
-        <div className="absolute left-[50%] top-0 h-full w-24 -skew-x-[28deg] bg-[#5a428f]/30" />
-        <div className="absolute bottom-0 left-[42%] h-3 w-28 -skew-x-[40deg] bg-cyan-400/70" />
+        <div className="absolute left-[32%] top-0 h-full w-28 -skew-x-28 bg-[#4d377f]/35" />
+        <div className="absolute left-[50%] top-0 h-full w-24 -skew-x-28 bg-[#5a428f]/30" />
+        <div className="absolute bottom-0 left-[42%] h-3 w-28 -skew-x-40 bg-cyan-400/70" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[78px] max-w-7xl items-center justify-between">
+      <div className="relative z-10 mx-auto flex min-h-[78px] max-w-7xl items-center justify-between">
         <a href="/" className="shrink-0">
           <Image
             src="/logo.png"

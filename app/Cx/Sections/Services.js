@@ -36,13 +36,13 @@ const Services = () => {
           Services We Offer
         </h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-10 grid max-w-[1257px] gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="relative overflow-hidden rounded-xl bg-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
+              className="relative mx-auto w-full max-w-[403px] overflow-hidden rounded-xl bg-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
             >
-              <div className="relative h-[280px] sm:h-[320px]">
+              <div className="relative h-[424px]">
                 <Image
                   src={card.image}
                   alt={card.alt}
@@ -54,12 +54,12 @@ const Services = () => {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.18)_45%,rgba(0,0,0,0.38)_100%)]" />
 
                 <h3
-                  className={`${anton.className} absolute left-1/2 top-4 w-full -translate-x-1/2 px-4 text-center text-[1.65rem] leading-none text-white uppercase sm:text-[1.9rem]`}
+                  className={`${anton.className} absolute left-1/2 top-8 w-full tracking-wider -translate-x-1/2 px-4 text-center text-[1.65rem] text-white uppercase sm:text-[2.5rem]`}
                 >
                   {card.title}
                 </h3>
 
-                {card.accent ?? null}
+                {/* {card.accent ?? null} */}
               </div>
             </div>
           ))}

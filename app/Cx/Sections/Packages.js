@@ -9,6 +9,7 @@ const plans = [
   {
     name: "Starter Reel",
     price: "$199",
+    href: "https://athleteclips.com/?add-to-cart=1237",
     features: [
       "Up to 5 minute",
       "Up to 5 minute",
@@ -21,6 +22,7 @@ const plans = [
     price: "$299",
     badge: "Most Popular Plan",
     featured: true,
+    href: "https://athleteclips.com/?add-to-cart=1239",
     features: [
       "Up to 5 minutes",
       "Up to 30 key plays",
@@ -34,6 +36,7 @@ const plans = [
   {
     name: "Custom Reel",
     price: "$399+",
+    href: "https://athleteclips.com/?add-to-cart=1800",
     features: [
       "Everything in Pro Reel",
       "Duration of your choice",
@@ -127,13 +130,13 @@ const Packages = () => {
               key={plan.name}
               className={`relative ${
                 plan.featured
-                  ? "rounded-[22px] bg-[#ff9a33] p-[3px] pt-[20px] shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+                  ? "rounded-[22px] bg-[#ff9a33] p-[3px] pt-[28px] shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
                   : ""
               }`}
             >
               {plan.badge ? (
                 <div
-                  className={`${anton.className} absolute inset-x-0 top-0 z-10 rounded-t-[18px] bg-[#ff9a33] py-1 text-center text-[0.72rem] uppercase tracking-[0.18em] text-[#5b2c00]`}
+                  className={`${anton.className} absolute inset-x-0 top-0 z-10 rounded-t-[22px] bg-[#ff9a33] py-1 text-center text-[0.72rem] uppercase tracking-[0.18em] text-[#5b2c00]`}
                 >
                   {plan.badge}
                 </div>
@@ -142,7 +145,7 @@ const Packages = () => {
               <div
                 className={`flex min-h-[410px] flex-col rounded-[18px] bg-white px-5 pb-5 pt-4 text-[#232323] shadow-[0_12px_30px_rgba(0,0,0,0.18)] ${
                   plan.featured
-                    ? "rounded-[15px] shadow-none"
+                    ? "rounded-[18px] shadow-none"
                     : ""
                 }`}
               >
@@ -167,7 +170,7 @@ const Packages = () => {
 
                 <div className="mt-auto pt-6">
                   <a
-                    href="https://athleteclips.com/package-pricing-2/"
+                    href={plan.href}
                     className="flex w-full items-center justify-center rounded-full bg-[#11a9aa] px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#17b8b9]"
                   >
                     Select plan
@@ -188,8 +191,8 @@ const Packages = () => {
               className="object-cover"
             />
 
-            <div className="relative z-10 flex min-h-[210px] items-center justify-end px-6 py-8 md:min-h-[190px] md:px-10">
-              <div className="max-w-[360px] text-left">
+            <div className="relative z-10 flex min-h-[210px] items-center justify-end px-6 py-12 md:min-h-[190px] md:px-10">
+              <div className="max-w-[480px] text-left">
                 <h3
                   className={`${anton.className} text-[2rem] leading-[0.95] text-white uppercase sm:text-[2.8rem]`}
                 >
@@ -198,7 +201,7 @@ const Packages = () => {
 
                 <a
                   href="https://athleteclips.com/package-pricing-2/"
-                  className="mt-5 inline-flex rounded-full bg-[#ff9b3f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
+                  className="mt-5 inline-flex rounded-xl bg-[#ff9b3f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
                 >
                   Get Your Video Now
                 </a>
