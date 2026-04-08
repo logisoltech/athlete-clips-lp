@@ -1,0 +1,209 @@
+import Image from "next/image";
+import { anton } from "../Font/Font";
+import { FaCheckCircle } from "react-icons/fa";
+
+const plans = [
+  {
+    name: "Starter Reel",
+    price: "$199",
+    features: [
+      "Up to 5 minute",
+      "Up to 5 minute",
+      "Up to 5 minute",
+      "Up to 5 minute",
+    ],
+  },
+  {
+    name: "Pro Reel",
+    price: "$299",
+    badge: "Most Popular Plan",
+    featured: true,
+    features: [
+      "Up to 5 minutes",
+      "Up to 30 key plays",
+      "Title card / Intro banner",
+      "High resolution",
+      "Custom music and titles",
+      "Zoom in/out slow-motion(x2)",
+      "Transitions",
+    ],
+  },
+  {
+    name: "Custom Reel",
+    price: "$399+",
+    features: [
+      "Everything in Pro Reel",
+      "Duration of your choice",
+      "Full Player Highlight Tracking",
+      "Banners",
+      "Custom Requests",
+    ],
+  },
+];
+
+const videos = [
+  {
+    id: "na_-1PU-1LU",
+    title: "Athlete Clips work sample 1",
+  },
+  {
+    id: "D3urcZybv-E",
+    title: "Athlete Clips work sample 2",
+  },
+  {
+    id: "jGUcirafChE",
+    title: "Athlete Clips work sample 3",
+  },
+  {
+    id: "cBLQ-Ww_91Y",
+    title: "Athlete Clips work sample 4",
+  },
+  {
+    id: "E1mQyUNFBxA",
+    title: "Athlete Clips work sample 5",
+  },
+  {
+    id: "Z-fjZDuioqc",
+    title: "Athlete Clips work sample 6",
+  },
+];
+
+const Packages = () => {
+  return (
+    <section
+      className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-16 lg:px-10"
+      style={{ backgroundColor: "#2d204e" }}
+    >
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] overflow-hidden lg:block">
+        <div className="absolute right-[-4%] top-[-16%] h-[165%] w-20 -skew-x-36 bg-[#5c3b90]" />
+        <div className="absolute right-[7%] top-[-18%] h-[172%] w-12 -skew-x-36 bg-[#452c6e]" />
+        <div className="absolute right-[17%] top-[-14%] h-[165%] w-10 -skew-x-36 bg-white" />
+        <div className="absolute right-[22%] top-[-17%] h-[174%] w-16 -skew-x-36 bg-[#d97900]" />
+        <div className="absolute right-[31%] top-[-15%] h-[168%] w-8 -skew-x-36 bg-[#ffffff]" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl">
+        <h2
+          className={`${anton.className} text-center text-[2.6rem] leading-none text-white uppercase sm:text-[3.6rem]`}
+        >
+          Packages
+        </h2>
+
+        <div className="mx-auto mt-10 grid max-w-5xl items-end gap-6 lg:grid-cols-3">
+          {plans.map((plan) => (
+            <div
+              key={plan.name}
+              className={`relative ${
+                plan.featured ? "pt-[20px]" : ""
+              }`}
+            >
+              {plan.badge ? (
+                <div
+                  className={`${anton.className} absolute inset-x-0 top-0 z-10 rounded-t-[18px] bg-[#ff9a33] py-1 text-center text-[0.72rem] uppercase tracking-[0.18em] text-[#5b2c00]`}
+                >
+                  {plan.badge}
+                </div>
+              ) : null}
+
+              <div
+                className={`flex min-h-[410px] flex-col rounded-[18px] bg-white px-5 pb-5 pt-4 text-[#232323] shadow-[0_12px_30px_rgba(0,0,0,0.18)] ${
+                  plan.featured
+                    ? "border-x-[3px] border-b-[3px] border-[#ff9a33] rounded-t-none"
+                    : ""
+                }`}
+              >
+                <h3
+                  className={`${anton.className} text-[1.15rem] leading-none uppercase text-black`}
+                >
+                  {plan.name}
+                </h3>
+
+                <p className="mt-3 text-[2rem] font-extrabold leading-none">
+                  {plan.price}
+                </p>
+
+                <ul className="mt-5 space-y-2.5 text-[0.82rem] text-[#5b5b5b]">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <FaCheckCircle className="mt-0.5 shrink-0 text-[0.95rem] text-[#5b5b5b]" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto pt-6">
+                  <a
+                    href="https://athleteclips.com/package-pricing-2/"
+                    className="flex w-full items-center justify-center rounded-full bg-[#11a9aa] px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#17b8b9]"
+                  >
+                    Select plan
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="relative mt-10 overflow-hidden rounded-[22px]">
+          <div className="relative min-h-[210px] w-full md:min-h-[190px]">
+            <Image
+              src="/CTA-2.png"
+              alt="Package CTA background"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+
+            <div className="relative z-10 flex min-h-[210px] items-center justify-end px-6 py-8 md:min-h-[190px] md:px-10">
+              <div className="max-w-[360px] text-left">
+                <h3
+                  className={`${anton.className} text-[2rem] leading-[0.95] text-white uppercase sm:text-[2.8rem]`}
+                >
+                  Use the code &ldquo;Athlete 20&rdquo; Get 20% Off
+                </h3>
+
+                <a
+                  href="https://athleteclips.com/package-pricing-2/"
+                  className="mt-5 inline-flex rounded-full bg-[#ff9b3f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
+                >
+                  Get Your Video Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h2
+            className={`${anton.className} text-center text-[2.6rem] leading-none text-white uppercase sm:text-[3.6rem]`}
+          >
+            Our Work
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {videos.map((video) => (
+              <div
+                key={video.id}
+                className="overflow-hidden rounded-2xl bg-black/20 shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+              >
+                <div className="aspect-video">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                    title={video.title}
+                    className="h-full w-full border-0"
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Packages;
