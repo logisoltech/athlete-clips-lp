@@ -6,7 +6,7 @@ const CTA1 = () => {
     <section className="relative w-full overflow-hidden">
       <div className="relative h-[120px] w-full sm:h-[150px] lg:h-[210px]">
         <Image
-          src="/CTA-1.png"
+          src="/CTA-11.png"
           alt="Upgrade your intro cards today"
           fill
           priority

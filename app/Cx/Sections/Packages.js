@@ -109,13 +109,13 @@ const Packages = () => {
       className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-16 lg:px-10"
       style={{ backgroundColor: "#2d204e" }}
     >
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] overflow-hidden lg:block">
-        <div className="absolute right-[-4%] top-[-16%] h-[165%] w-20 -skew-x-36 bg-[#5c3b90]" />
-        <div className="absolute right-[7%] top-[-18%] h-[172%] w-12 -skew-x-36 bg-[#452c6e]" />
-        <div className="absolute right-[17%] top-[-14%] h-[165%] w-10 -skew-x-36 bg-white" />
-        <div className="absolute right-[22%] top-[-17%] h-[174%] w-16 -skew-x-36 bg-[#d97900]" />
-        <div className="absolute right-[31%] top-[-15%] h-[168%] w-8 -skew-x-36 bg-[#ffffff]" />
-      </div>
+      <Image
+        src="/bottom-right-corner.png"
+        alt=""
+        width={600}
+        height={900}
+        className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto lg:block"
+      />
 
       <div className="relative mx-auto max-w-7xl">
         <h2
@@ -184,7 +184,7 @@ const Packages = () => {
         <div className="relative mt-10 overflow-hidden rounded-[22px]">
           <div className="relative min-h-[210px] w-full md:min-h-[190px]">
             <Image
-              src="/CTA-2.png"
+              src="/CTA-22.png"
               alt="Package CTA background"
               fill
               sizes="100vw"

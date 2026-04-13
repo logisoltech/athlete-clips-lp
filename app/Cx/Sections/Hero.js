@@ -4,16 +4,8 @@ import { anton } from "../Font/Font";
 const Hero = () => {
   return (
     <section
-      className="relative z-20 overflow-visible"
-      style={{ backgroundColor: "#2d204e" }}
+      className="relative z-40 overflow-visible"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-12%] top-0 h-7 w-[52%] -skew-x-38 bg-cyan-400/80 sm:h-8" />
-        <div className="absolute left-[-3%] top-5 h-10 w-[62%] -skew-x-38 bg-[#5a428f]/70 sm:top-6 sm:h-12" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(45,32,78,0)_0%,rgba(38,27,65,0.96)_100%)]" />
-        <div className="absolute -left-[5%] bottom-6 h-16 w-[75%] -skew-x-34 bg-[#3b2a63]/90" />
-      </div>
-
       <div className="relative mx-auto flex min-h-[calc(100vh-78px)] max-w-7xl flex-col justify-center px-4 py-12 sm:px-6 sm:py-14 lg:min-h-[540px] lg:px-10 lg:py-16">
         <div className="relative z-10 max-w-[620px]">
           <h1

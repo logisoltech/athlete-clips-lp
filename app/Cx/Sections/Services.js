@@ -4,13 +4,12 @@ import { anton } from "../Font/Font";
 const cards = [
   {
     title: "Dynamic Reels",
-    image: "/card-1.png",
+    image: "/dynamic-reel-image.png",
     alt: "Dynamic soccer reel preview",
-    imageClassName: "scale-[1.16] object-[42%_34%]",
   },
   {
     title: "Pro Quality Videos",
-    image: "/card-2.png",
+    image: "/pro-quality-vids.png",
     alt: "Pro quality sports video preview",
     accent: (
       <div className="absolute left-1/2 top-14 h-0 w-0 -translate-x-1/2 border-x-16 border-t-24 border-x-transparent border-t-[#ff4a3a]" />
@@ -18,7 +17,7 @@ const cards = [
   },
   {
     title: "Slow-Mo & Effects",
-    image: "/card-3.jpg",
+    image: "/slow-mo.png",
     alt: "Slow motion soccer edit preview",
   },
 ];
