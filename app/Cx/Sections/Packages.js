@@ -11,10 +11,10 @@ const plans = [
     price: "$199",
     href: "https://athleteclips.com/?add-to-cart=1237",
     features: [
-      "Up to 5 minute",
-      "Up to 5 minute",
-      "Up to 5 minute",
-      "Up to 5 minute",
+      "Up to 3 minutes",
+      "Up to 20 key plays",
+      "Title card / Intro banner",
+      "High resolution",
     ],
   },
   {
@@ -210,7 +210,7 @@ const Packages = () => {
           </div>
         </div>
 
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <h2
             className={`${anton.className} text-center text-[2.6rem] leading-none text-white uppercase sm:text-[3.6rem]`}
           >
@@ -281,7 +281,7 @@ const Packages = () => {
                   </div>
                 ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -19,6 +19,14 @@ export default function Home() {
           unoptimized
           className="pointer-events-none absolute left-0 top-0 z-30 w-[95%] max-w-[950px]"
         />
+        <Image
+          src="/main-banner-bkg.png"
+          alt=""
+          width={1920}
+          height={1080}
+          unoptimized
+          className="pointer-events-none absolute left-0 top-[25%] z-50 w-full"
+        />
         <Nav/>
         <Hero/>
         {/* <Image
