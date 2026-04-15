@@ -6,7 +6,12 @@ const Nav = () => {
       className="relative z-50 px-4 py-4 sm:px-6 lg:px-10"
     >
       <div className="relative z-50 mx-auto flex min-h-[78px] max-w-7xl items-center justify-between">
-        <a href="/" className="shrink-0">
+        <a
+          href="/"
+          className="shrink-0"
+          data-aos="fade-right"
+          data-aos-duration="700"
+        >
           <Image
             src="/logo.png"
             alt="Athlete Clips"
@@ -17,7 +22,11 @@ const Nav = () => {
           />
         </a>
 
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div
+          className="flex items-center gap-3 sm:gap-4"
+          data-aos="fade-left"
+          data-aos-duration="700"
+        >
           <a
             href="mailto:info@athleteclips.com"
             aria-label="Email Athlete Clips"

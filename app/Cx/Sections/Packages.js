@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { anton } from "../Font/Font";
 import { FaCheckCircle } from "react-icons/fa";
+import { OrangeCtaChevron } from "../OrangeCtaChevron";
 
 const plans = [
   {
@@ -120,11 +121,13 @@ const Packages = () => {
       <div className="relative mx-auto max-w-7xl">
         <h2
           className={`${anton.className} text-center text-[2.6rem] leading-none text-white uppercase sm:text-[3.6rem]`}
+          data-aos="fade-down"
+          data-aos-duration="700"
         >
           Packages
         </h2>
 
-        <div className="mx-auto mt-10 grid max-w-5xl items-end gap-6 lg:grid-cols-3">
+        <div data-aos="zoom-in" data-aos-duration="700" className="mx-auto mt-10 grid max-w-5xl items-end gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -196,15 +199,18 @@ const Packages = () => {
                 <h3
                   className={`${anton.className} text-[2rem] leading-[0.95] text-white uppercase sm:text-[2.8rem]`}
                 >
-                  Use the code &ldquo;Athlete 20&rdquo; Get 20% Off
+                  Use the code &ldquo;Athlete20&rdquo; Get 20% Off
                 </h3>
 
-                <a
-                  href="https://athleteclips.com/package-pricing-2/"
-                  className="mt-5 inline-flex rounded-xl bg-[#ff9b3f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
-                >
-                  Get Your Video Now
-                </a>
+                <div className="group mt-5 inline-flex items-center gap-2 text-sm">
+                  <a
+                    href="https://athleteclips.com/package-pricing-2/"
+                    className="inline-flex items-center rounded-xl bg-[#ff9b3f] px-6 py-3 font-semibold text-white transition hover:bg-[#ffa654]"
+                  >
+                    Get Your Video Now
+                  </a>
+                  <OrangeCtaChevron />
+                </div>
               </div>
             </div>
           </div>
@@ -283,6 +289,7 @@ const Packages = () => {
           </div>
         </div> */}
       </div>
+      <div></div>
     </section>
   );
 };

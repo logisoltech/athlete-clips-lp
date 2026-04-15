@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { OrangeCtaChevron } from "../OrangeCtaChevron";
 import { anton } from "../Font/Font";
 
 const CTA1 = () => {
@@ -19,15 +20,19 @@ const CTA1 = () => {
             <h2
               className={`${anton.className} tracking-wide max-w-[600px] text-[1.5rem] leading-none text-white uppercase sm:max-w-[700px] sm:text-[2.8rem]`}
             >
-              Upgrade Your Intro Cards Today!
+              Upgrade Your Intro Cards Today!<br/>
+              Use Code <span className="text-[#ff8f24]">&ldquo;ATHLETE20&rdquo;</span> Get 20% Off
             </h2>
 
-            <a
-              href="https://athleteclips.com/package-pricing-2/"
-              className="mt-3 inline-flex rounded-xl bg-[#ff9b3f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#ffa654]"
-            >
-              Get Your Video Now
-            </a>
+            <div className="group mt-3 inline-flex items-center gap-2 text-sm">
+              <a
+                href="https://athleteclips.com/package-pricing-2/"
+                className="inline-flex items-center rounded-xl bg-[#ff9b3f] px-5 py-3 font-semibold text-white transition hover:bg-[#ffa654]"
+              >
+                Get Your Video Now
+              </a>
+              <OrangeCtaChevron />
+            </div>
           </div>
         </div>
       </div>

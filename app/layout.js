@@ -1,4 +1,5 @@
 import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { AosInit } from "./Cx/AosInit";
 import "./globals.css";
 
 const jakartaSans = Plus_Jakarta_Sans({
@@ -23,7 +24,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${jakartaSans.variable} ${geistMono.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AosInit />
+        {children}
+      </body>
     </html>
   );
 }

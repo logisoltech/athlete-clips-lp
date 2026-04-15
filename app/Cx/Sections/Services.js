@@ -31,11 +31,13 @@ const Services = () => {
       <div className="mx-auto max-w-7xl">
         <h2
           className={`${anton.className} text-center text-[2.4rem] leading-none text-white uppercase sm:text-[3.5rem]`}
+          data-aos="fade-down"
+          data-aos-duration="700"
         >
           Services We Offer
         </h2>
 
-        <div className="mx-auto mt-10 grid max-w-[1257px] gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div data-aos="fade-up" data-aos-duration="700" className="mx-auto mt-10 grid max-w-[1257px] gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card) => (
             <div
               key={card.title}
