@@ -26,6 +26,18 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <AosInit />
+      <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZL59YZVHCG"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZL59YZVHCG');
+          `}
+        </Script>
         {children}
       </body>
     </html>
