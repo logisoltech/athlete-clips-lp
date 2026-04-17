@@ -1,4 +1,5 @@
 import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import { AosInit } from "./Cx/AosInit";
 import "./globals.css";
 
