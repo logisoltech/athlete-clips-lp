@@ -7,7 +7,7 @@ const Nav = () => {
     >
       <div className="relative z-50 mx-auto flex min-h-[78px] max-w-7xl items-center justify-between">
         <a
-          href="/"
+          href="https://athleteclips.com/"
           className="shrink-0"
           data-aos="fade-right"
           data-aos-duration="700"

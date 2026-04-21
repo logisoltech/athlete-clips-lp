@@ -13,7 +13,7 @@ const Images = () => {
       <div className="mx-auto max-w-7xl px-0 lg:px-10">
         <div className="relative z-0 mx-auto w-[108%] max-w-none -translate-x-[4%] lg:w-[116%] lg:-translate-x-[6%]">
           <Image
-            src="/3-images.png"
+            src="/3-imagess.png"
             alt="Athletes playing on the field"
             width={1600}
             height={520}

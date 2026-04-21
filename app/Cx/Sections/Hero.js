@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { OrangeCtaChevron } from "../OrangeCtaChevron";
 import { anton } from "../Font/Font";
 
 const Hero = () => {
@@ -36,7 +35,14 @@ const Hero = () => {
               >
                 Highlight Reel
               </a>
-              <OrangeCtaChevron />
+              <Image
+                src="/arrow-orange.png"
+                alt=""
+                width={80}
+                height={80}
+                className="motion-safe:animate-bounce"
+                aria-hidden="true"
+              />
             </span>
           </div>
 
